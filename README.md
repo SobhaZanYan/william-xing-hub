@@ -10,6 +10,7 @@
 |------|-----|
 | 阿布扎比数据报告 | https://SobhaZanYan.github.io/abu-market-report/ |
 | 买房成本计算器 | https://SobhaZanYan.github.io/uae-buy-cost-calculator/ |
+| 租金回报率计算器 | https://SobhaZanYan.github.io/uae-rental-yield-calculator/ |
 | 迪拜选校助手 | https://SobhaZanYan.github.io/dubai-school-picker/ |
 | 护照 MRZ 校验 | https://SobhaZanYan.github.io/passport-mrz-check/ |
 

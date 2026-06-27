@@ -296,6 +296,71 @@
     }
     .section-head p { font-size: 0.82rem; color: var(--muted); }
 
+    .vlog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 2.5rem;
+    }
+    @media (max-width: 820px) { .vlog-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 520px) { .vlog-grid { grid-template-columns: 1fr; } }
+
+    .vlog-card {
+      padding: 1rem 1.1rem;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s, background 0.2s;
+    }
+    .vlog-card:hover {
+      border-color: var(--border-strong);
+      background: var(--surface-hover);
+      box-shadow: 0 0 24px rgba(201, 162, 39, 0.12);
+      transform: translateY(-2px);
+    }
+    .vlog-card.featured-hub {
+      grid-column: 1 / -1;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+      border-color: rgba(201, 162, 39, 0.35);
+    }
+    @media (max-width: 520px) {
+      .vlog-card.featured-hub { flex-direction: column; align-items: flex-start; }
+    }
+    .vlog-day {
+      font-family: "SF Mono", "Consolas", monospace;
+      font-size: 0.62rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: var(--gold);
+    }
+    .vlog-card h3 { font-size: 0.88rem; font-weight: 600; color: var(--text); }
+    .vlog-card p { font-size: 0.74rem; color: var(--muted); line-height: 1.5; flex: 1; }
+    .vlog-go {
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--gold-bright);
+      font-family: "SF Mono", "Consolas", monospace;
+    }
+    .vlog-card.featured-hub .vlog-icon {
+      width: 44px;
+      height: 44px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.62rem;
+      font-weight: 800;
+      border: 1px solid var(--border);
+      background: var(--gold-dim);
+      color: var(--gold-light);
+      font-family: "SF Mono", "Consolas", monospace;
+    }
+    .vlog-card.featured-hub .vlog-body { flex: 1; }
+
     .tool-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -419,12 +484,58 @@
   </section>
 
   <div class="section-head">
+    <h2 data-i18n="vlog.title">Vlog · 阿布30天</h2>
+    <p data-i18n="vlog.sub">Week 1 已更新 Day 1—6 · ADREC 数据系列 · 可收藏阅读</p>
+  </div>
+
+  <div class="vlog-grid">
+    <a class="vlog-card glass-panel featured-hub" href="https://sobhazanyan.github.io/abu-30days-vlog/" target="_blank" rel="noopener">
+      <span class="vlog-icon">VLOG</span>
+      <div class="vlog-body">
+        <h3 data-i18n="vlog.hub.title">阿布房产 30 天 · 系列目录</h3>
+        <p data-i18n="vlog.hub.desc">从认地图到三岛选型，系统建立阿布扎比买房框架。进入目录查看全部章节。</p>
+      </div>
+      <span class="vlog-go">ALL →</span>
+    </a>
+    <a class="vlog-card glass-panel" href="https://sobhazanyan.github.io/abu-30days-vlog/articles/day-1.html" target="_blank" rel="noopener">
+      <span class="vlog-day">DAY 01</span>
+      <h3 data-i18n="vlog.d1.title">区域地图全览</h3>
+      <p data-i18n="vlog.d1.desc">4 大板块、15+ 核心区域</p>
+    </a>
+    <a class="vlog-card glass-panel" href="https://sobhazanyan.github.io/abu-30days-vlog/articles/day-2.html" target="_blank" rel="noopener">
+      <span class="vlog-day">DAY 02</span>
+      <h3 data-i18n="vlog.d2.title">阿布 vs 迪拜</h3>
+      <p data-i18n="vlog.d2.desc">双城差异与配置逻辑</p>
+    </a>
+    <a class="vlog-card glass-panel" href="https://sobhazanyan.github.io/abu-30days-vlog/articles/day-3.html" target="_blank" rel="noopener">
+      <span class="vlog-day">DAY 03</span>
+      <h3 data-i18n="vlog.d3.title">谁在买</h3>
+      <p data-i18n="vlog.d3.desc">51% 居留 · 71% 期房</p>
+    </a>
+    <a class="vlog-card glass-panel" href="https://sobhazanyan.github.io/abu-30days-vlog/articles/day-4.html" target="_blank" rel="noopener">
+      <span class="vlog-day">DAY 04</span>
+      <h3 data-i18n="vlog.d4.title">三张底牌</h3>
+      <p data-i18n="vlog.d4.desc">主权基金 · 零税 · 外交</p>
+    </a>
+    <a class="vlog-card glass-panel" href="https://sobhazanyan.github.io/abu-30days-vlog/articles/day-5.html" target="_blank" rel="noopener">
+      <span class="vlog-day">DAY 05</span>
+      <h3 data-i18n="vlog.d5.title">人口与供应</h3>
+      <p data-i18n="vlog.d5.desc">420 万人 · 为何还紧</p>
+    </a>
+    <a class="vlog-card glass-panel" href="https://sobhazanyan.github.io/abu-30days-vlog/articles/day-6.html" target="_blank" rel="noopener">
+      <span class="vlog-day">DAY 06</span>
+      <h3 data-i18n="vlog.d6.title">核心三岛</h3>
+      <p data-i18n="vlog.d6.desc">Reem · Yas · Saadiyat</p>
+    </a>
+  </div>
+
+  <div class="section-head">
     <h2 data-i18n="tools.title">Tools · 实用工具</h2>
     <p data-i18n="tools.sub">静态数据工具矩阵 · 可收藏 · 可转发</p>
   </div>
 
   <div class="tool-grid">
-    <a class="tool-card glass-panel featured" href="https://sobhazanyan.github.io/abu-market-report/" target="_blank" rel="noopener">
+    <a class="tool-card glass-panel" href="https://sobhazanyan.github.io/abu-market-report/" target="_blank" rel="noopener">
       <span class="tool-icon">DATA</span>
       <h3 data-i18n="tool.report.title">阿布扎比数据报告</h3>
       <p data-i18n="tool.report.desc">ADREC 2025 年报宏观 KPI + 近半年成交数据；期房结构、投资区筛选、均价走势与区域分布。</p>
@@ -434,6 +545,12 @@
       <span class="tool-icon">CALC</span>
       <h3 data-i18n="tool.calc.title">买房成本计算器</h3>
       <p data-i18n="tool.calc.desc">迪拜 / 阿布扎比 · 期房与二手现房一次性费用估算；期房支持付款计划与 Excel 导出。</p>
+      <span class="tool-go">OPEN →</span>
+    </a>
+    <a class="tool-card glass-panel featured" href="https://sobhazanyan.github.io/uae-rental-yield-calculator/" target="_blank" rel="noopener">
+      <span class="tool-icon">ROI</span>
+      <h3 data-i18n="tool.yield.title">租金回报率计算器</h3>
+      <p data-i18n="tool.yield.desc">毛 / 净回报率、回本年限、NOI 拆解；可选购价外成本与按揭后现金回报率。</p>
       <span class="tool-go">OPEN →</span>
     </a>
     <a class="tool-card glass-panel" href="https://sobhazanyan.github.io/dubai-school-picker/" target="_blank" rel="noopener">
